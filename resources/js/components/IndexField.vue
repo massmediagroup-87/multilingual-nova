@@ -18,7 +18,7 @@
                 let locales = this.field.value.locales;
                 locales.map(function (item) {
                     if (item.translated)
-                        item.label += " - translated";
+                        item.label += " - " + this.__("translate");
                     return item;
                 });
                 Object.assign(this.field, {"options": this.field.value.locales});
